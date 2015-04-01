@@ -11,6 +11,10 @@ students = {
 
 students[:cohort4] = 43
 
+classcount = total(students)
+
+
+
 def display(bml)
     bml.each do |key, value|
         puts "#{key}: #{value} students"
@@ -35,14 +39,9 @@ end
 display(students)
 
 spacer
-
-classcount = total(students)
 puts "The total number of students in all 4 cohorts is " + classcount.to_s
 
 spacer
-
-
-
 puts students
 
 spacer
@@ -50,25 +49,20 @@ puts "The keys of the students hash: #{students.keys}"
 
 spacer
 puts "The values of the students hash: #{students.values}"
+
 spacer
-
-
-
 puts "The classes grew by 5%."
 expand(students)
 
-spacer
-
+#This is where we delete the second cohort, may they rest in peace"
 students.delete(:cohort2)
 
+spacer
 display(students)
 
 spacer
-
 display(students)
 
 spacer
-
-classcount = total(students)
 puts "The total number of students in all cohorts except 2 is " + classcount.to_s
 
