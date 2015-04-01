@@ -1,6 +1,6 @@
 ##Spacer is just for ease of use on the output
 def spacer
-    puts "\n\n"
+    puts "\n"
 end
 
 students = {
@@ -10,10 +10,6 @@ students = {
 }
 
 students[:cohort4] = 43
-
-classcount = total(students)
-
-
 
 def display(bml)
     bml.each do |key, value|
@@ -35,6 +31,8 @@ def expand(bml)
         puts students
     end
 end
+
+classcount = total(students)
 
 display(students)
 
@@ -61,8 +59,4 @@ spacer
 display(students)
 
 spacer
-display(students)
-
-spacer
 puts "The total number of students in all cohorts except 2 is " + classcount.to_s
-
